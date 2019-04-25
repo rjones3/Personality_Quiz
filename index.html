@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Who Are You?</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <style>
+        .label {
+            font-size: 20px;
+        }
+        .btn {
+            margin-bottom: 30px;
+        }
+        .btn:hover {
+            color: white;
+            background-image: url(img/bg.jpg);
+        }
+        h1 {
+            margin: 0 0 50px 0;
+            font-size: 60px;
+            color: white;
+        }
+        * {
+            text-align: center;
+        }
+        p {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="background-image: url(img/bg.jpg)">
+        
+
+    
+    <!-- <ol>
+        <li>Start</li>
+        <li>Declare a List of Characters</li>
+        <li>Make Questions for the quiz</li>
+        <li>Ask questions</li>
+        <li>For each question answered add a point towards that characters</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol> -->
+        <h1>Who Are You?</h1>
+        <form action="#" onsubmit="event.preventDefault(); WhoAmI();">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div>
+                            <label class="label" for="Q1" style="text-align: center;">One of your friends shows up at a party drunk with a girl that isn't easy to look at. You...</label>
+                            <br>
+                                <p> <input type="radio" id="Ky" name="Q1" onclick="ImKy()"> Think Shes Trashy at first, but by the end of the night shes grown on you.</p>
+                                <p> <input type="radio" id="Ca" name="Q1" onclick="ImCa()"> Call him an idiot and crack jokes on him and her all night.</p>
+                                <p> <input type="radio" id="St" name="Q1" onclick="ImSt()"> Make an effort to be nice to her and include her in the conversation.</p>
+                                <p> <input type="radio" id="Ke" name="Q1" onclick="ImKe()"> Think shes nice but everyone is making fun of her so you join in too.</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div>
+                            <label class="label" for="Q2" style="text-align: center;">You get extremely ticked off when someone makes a comment about your...</label>
+                            <br>
+                                <p> <input type="radio" id="Ky" name="Q2" onclick="ImKy()"> Intelligence. </p> 
+                                <p> <input type="radio" id="St" name="Q2" onclick="ImSt()"> Opinion. </p> 
+                                <p> <input type="radio" id="Ca" name="Q2" onclick="ImCa()"> Body. </p> 
+                                <p> <input type="radio" id="Ke" name="Q2" onclick="ImKe()"> Clothing. </p> 
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div>
+                            <label class="label" for="Q3" style="text-align: center;">Fifty bucks accidentally drops out of your friends wallet when he's buying a round of drinks, but he doesn't notice. You...</label>
+                            <br>
+                                <p> <input type="radio" id="St" name="Q3" onclick="ImSt()"> Hand it over to him. </p> 
+                                <p> <input type="radio" id="Ca" name="Q3" onclick="ImCa()"> Swipe it and gloat about it all night. </p> 
+                                <p> <input type="radio" id="Ky" name="Q3" onclick="ImKy()"> Hand it over to him because you know he'll buy more drinks with it anyway. </p> 
+                                <p> <input type="radio" id="Ke" name="Q3" onclick="ImKe()"> Use it yourself to buy drinks for the table. </p> 
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div>
+                            <label class="label" for="Q4" style="text-align: center;">You Express yourself by...</label>
+                            <br>
+                                <p> <input type="radio" id="Ca" name="Q4" onclick="ImCa()"> Yelling, Swearing, Whatever it takes to get your point across. </p> 
+                                <p> <input type="radio" id="St" name="Q4" onclick="ImSt()"> Talking and listening politely. </p> 
+                                <p> <input type="radio" id="Ke" name="Q4" onclick="ImKe()"> Agreeing to what everybody else is saying. </p> 
+                                <p> <input type="radio" id="Ky" name="Q4" onclick="ImKy()"> Sharing What you know. </p> 
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div>
+                            <label class="label" for="Q5" style="text-align: center;">You go to see a movie and there's some kid horsing around in front of the screen. You...</label>
+                            <br>
+                                <p> <input type="radio" id="Ky" name="Q5" onclick="ImKy()"> Move up so hes not in your way. </p> 
+                                <p> <input type="radio" id="St" name="Q5" onclick="ImSt()"> Tell someone that works there to kick the kid out or give you a refund. </p> 
+                                <p> <input type="radio" id="Ca" name="Q5" onclick="ImCa()"> Throw a soda at him and tell hime to Shut up or Get out! </p> 
+                                <p> <input type="radio" id="Ke" name="Q5" onclick="ImKe()"> Just watch the movie and do nothing. </p> 
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div>
+                            <label class="label" for="Q6" style="text-align: center;">Your friends want to go cliff jumping. You...</label>
+                            <br>
+                                <p> <input type="radio" id="Ke" name="Q6" onclick="ImKe()"> End up Cracking your head on a tree. </p> 
+                                <p> <input type="radio" id="Ca" name="Q6" onclick="ImCa()"> Close your eyes and scream for your life the whole way down. </p> 
+                                <p> <input type="radio" id="Ky" name="Q6" onclick="ImKy()"> Dont want to go but do so you dont get laughed at. </p> 
+                                <p> <input type="radio" id="St" name="Q6" onclick="ImSt()"> Are the first to run. </p> 
+                            <br>
+                        </div>       
+                    </div>
+                </div>
+            </div>    
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="submit" value="Submit" class="btn">
+                        <input type="reset" value="Reset" class="btn">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+
+        var sp = {
+            st : 0,
+            ky : 0,
+            ke : 0,
+            ca : 0
+        }
+
+       function ImSt() {
+        // event.preventDefault();
+            sp.st += 1;
+       }
+       function ImKy() {
+        // event.preventDefault();
+            sp.ky += 1;
+       }
+       function ImKe() {
+        // event.preventDefault();
+            sp.ke += 1;
+       }
+       function ImCa() {
+        // event.preventDefault();
+            sp.ca += 1;
+       }
+       
+       function WhoAmI() {
+            var Max = Math.max.apply(null,Object.keys(sp).map(function(x){ return sp[x] }));
+            if (Max == sp.ky) {
+                // alert("You are Kyle Broflovski"); {
+                    
+                // }
+            window.location.href = "https://en.wikipedia.org/wiki/Kyle_Broflovski"    
+                
+            }
+            if (Max == sp.st) {
+                // alert("You are Stan Marsh"); {
+                    
+                // }
+                window.location.href = "https://en.wikipedia.org/wiki/Stan_Marsh"
+                
+            }
+            if (Max == sp.ke) {
+                // alert("You are Kenny McCormick"); {
+                   
+                // }
+                window.location.href = "https://en.wikipedia.org/wiki/Kenny_McCormick"
+                
+            }
+            if (Max == sp.ca) {
+                // alert("You are Eric Cartman"); {
+                    
+                // }
+               window.location.href = 'https://en.wikipedia.org/wiki/Eric_Cartman'
+            }
+            console.log(Object.keys(sp).filter(function(x){ return sp[x] == Max; })[0]);
+       }
+       
+
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="slick/slider.js"></script>
+</body>
+</html>
